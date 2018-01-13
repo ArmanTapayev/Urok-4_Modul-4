@@ -98,7 +98,7 @@ start:
 
 			goto start;
 
-			break;
+		break;
 
 #pragma endregion
 
@@ -113,24 +113,24 @@ start:
 
 			int Number, Power, Sum_of_power, power_of_number;
 
-		mark2:
+mark2:
 
 			cout << "Введите челое число N>1:\n";
 			cout << "N = ";
 
 			cin >> Number;
 
-			if (Number <= 1)
-			{
-				cout << "По условию N>1.\n";
-				cout << "Введите N еще раз.\n";
+				if (Number <= 1)
+				{
+					cout << "По условию N>1.\n";
+					cout << "Введите N еще раз.\n";
 
-				goto mark2;
-			}
+					goto mark2;
+				}
 
 			cout << endl;
 
-		mark3:
+mark3:
 
 			cout << "Введите степень чисел М:\n";
 			cout << "М = ";
@@ -139,33 +139,33 @@ start:
 
 			cout << endl;
 
-			if (Power < 1)
-			{
-				cout << "По условию M>=1.\n";
-				cout << "Введите M еще раз.\n";
-				goto mark3;
-			}
-
-			for (Sum_of_power = 0, i = 1; i <= Number; i++)
-			{
-				for (power_of_number = 1, j = 1; j <= Power; j++)
+				if (Power < 1)
 				{
-					power_of_number = power_of_number*i;
+					cout << "По условию M>=1.\n";
+					cout << "Введите M еще раз.\n";
+					goto mark3;
 				}
 
-				Sum_of_power += power_of_number;
-			}
+				for (Sum_of_power = 0, i = 1; i <= Number; i++)
+				{
+					for (power_of_number = 1, j = 1; j <= Power; j++)
+					{
+						power_of_number = power_of_number*i;
+					}
 
-			cout << "Сумма чисел возведенных в степень " << Power << " составляет " << Sum_of_power << endl;
+					Sum_of_power += power_of_number;
+				}
 
-			cout << endl;
+				cout << "Сумма чисел возведенных в степень " << Power << " составляет " << Sum_of_power << endl;
 
-			system("pause");
-			system("cls");
+				cout << endl;
+
+				system("pause");
+				system("cls");
 
 			goto start;
 
-			break;
+		break;
 #pragma endregion
 
 #pragma region Task3
@@ -198,13 +198,13 @@ start:
 			cout << "\nМесяц" << "\t" << "Сбережения" << "\t" << "Расходы" << "\t\t" << "Проценты" << endl;
 			cout << "---------------------------------------------------------------" << endl;
 
-			while (Saving > 0)
-			{
-				power_end = pow(1.03, i); //проценты на конец текущего месяца
-				remain_on_end_of_month = expenses*power_end - scholarship; //(расходы - степендия) на конец текущего месяца
-				Saving = Saving - remain_on_end_of_month; // остаток сбережений на начало следующего месяца
-				cout << "  " << ++i << "\t" << Saving << "\t\t" << remain_on_end_of_month << "\t\t" << power_end << endl;
-			}
+				while (Saving > 0)
+				{
+					power_end = pow(1.03, i); //проценты на конец текущего месяца
+					remain_on_end_of_month = expenses*power_end - scholarship; //(расходы - степендия) на конец текущего месяца
+					Saving = Saving - remain_on_end_of_month; // остаток сбережений на начало следующего месяца
+					cout << "  " << ++i << "\t" << Saving << "\t\t" << remain_on_end_of_month << "\t\t" << power_end << endl;
+				}
 
 			cout << endl;
 
@@ -215,7 +215,7 @@ start:
 
 			goto start;
 
-			break;
+		break;
 #pragma endregion
 
 #pragma region Task4
@@ -228,43 +228,43 @@ start:
 			cout << "4.Дано натуральное число n (n<9999) и число m.\n";
 			cout << "Найти сумму m-последних цифр числа n.\n" << endl;
 
-		mark4:
+mark4:
 			cout << "Введите число n<9999:\n";
 			cout << "n=";
 			cin >> Number_4;
 
-			if (Number_4 >= 9999)
-			{
-				cout << "Число должно быть меньше 9999.\n";
-				cout << "Введите число еще раз.\n";
-				goto mark4;
-			}
+				if (Number_4 >= 9999)
+				{
+					cout << "Число должно быть меньше 9999.\n";
+					cout << "Введите число еще раз.\n";
+					goto mark4;
+				}
 
-			cout << "Введите число m:\n";
-			cout << "m=";
-			cin >> Last_numbers;
+				cout << "Введите число m:\n";
+				cout << "m=";
+				cin >> Last_numbers;
 
-			first_number = Number_4 % 10;//последнее число, единичный разряд 
-			temp_number = Number_4;
+				first_number = Number_4 % 10;//последнее число, единичный разряд 
+				temp_number = Number_4;
 
-			for (sum_of_last_numbers = 0, i = 1; i < Last_numbers; i++)
-			{
-				temp_number = temp_number / 10;
-				sum_of_last_numbers += temp_number % 10;
-			}
+				for (sum_of_last_numbers = 0, i = 1; i < Last_numbers; i++)
+				{
+					temp_number = temp_number / 10;
+					sum_of_last_numbers += temp_number % 10;
+				}
 
-			final_sum = first_number + sum_of_last_numbers;
+				final_sum = first_number + sum_of_last_numbers;
 
-			cout << "Сумма последних " << Last_numbers << " равна " << final_sum << endl;
+				cout << "Сумма последних " << Last_numbers << " равна " << final_sum << endl;
 
-			cout << endl;
+				cout << endl;
 
 			system("pause");
 			system("cls");
 
 			goto start;
 
-			break;
+		break;
 #pragma endregion
 
 #pragma region Task5
@@ -281,6 +281,7 @@ start:
 
 			Power_number = 0;
 			res = 0;
+
 			for (i = 100; i <= 9999; i++)
 			{
 				temp_num1 = i;
@@ -316,7 +317,7 @@ start:
 
 			goto start;
 
-			break;
+		break;
 
 #pragma endregion
 
@@ -362,7 +363,7 @@ start:
 
 			goto start;
 
-			break;
+		break;
 #pragma endregion
 
 #pragma region Task7
@@ -387,15 +388,15 @@ start:
 
 			itog = decimal % 8;
 
-			while (decimal >= 8)
-			{
+				while (decimal >= 8)
+				{
 
-				decimal = decimal / 8;
-				ostatok = (decimal % 8) * i;
-				i = i * 10;
-				itog += ostatok;
+					decimal = decimal / 8;
+					ostatok = (decimal % 8) * i;
+					i = i * 10;
+					itog += ostatok;
 
-			}
+				}
 
 			cout << endl;
 
@@ -408,14 +409,14 @@ start:
 
 			goto start;
 
-			break;
+		break;
 #pragma endregion
 
 #pragma region Default
 
 		default:
 
-		mark_def:
+mark_def:
 			int z;
 
 			cout << "\nДля выхода из задания нажмите 0.\n";
@@ -423,18 +424,18 @@ start:
 
 			cin >> z;
 
-			if (z == 0)
-			{
-				goto end;
-			}
-			else if (z == 1)
-			{
-				goto start;
-			}
+				if (z == 0)
+				{
+					goto end;
+				}
+				else if (z == 1)
+				{
+					goto start;
+				}
 
 			goto mark_def;
 
-			break;
+		break;
 #pragma endregion
 
 		}
