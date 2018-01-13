@@ -393,7 +393,7 @@ mark4:
 
 					temp_8 = temp_8 / 8;
 					remainder_8 = (temp_8 % 8) * i;
-					i = i * 10;
+					i *= 10;
 					result_8 += remainder_8;
 
 				}
