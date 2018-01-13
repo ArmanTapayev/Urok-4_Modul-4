@@ -369,7 +369,7 @@ mark4:
 #pragma region Task7
 		case 7:
 
-			int decimal, ostatok, celoe, itog, decimall;
+			int temp_8, remainder_8, celoe, result_8, decimal;
 
 			cout << "\nЗадача №7\n";
 
@@ -381,26 +381,26 @@ mark4:
 			cout << "Введите десятичное число х:\n";
 			cout << "х = ";
 
-			cin >> decimall;
+			cin >> decimal;
 
-			decimal = decimall;
+			temp_8 = decimal;
 			i = 10;
 
-			itog = decimal % 8;
+			result_8 = temp_8 % 8;
 
-				while (decimal >= 8)
+				while (temp_8 >= 8)
 				{
 
-					decimal = decimal / 8;
-					ostatok = (decimal % 8) * i;
+					temp_8 = temp_8 / 8;
+					remainder_8 = (temp_8 % 8) * i;
 					i = i * 10;
-					itog += ostatok;
+					result_8 += remainder_8;
 
 				}
 
 			cout << endl;
 
-			cout << "Число " << decimall << " в восьмиричной систиеме равно " << itog << endl;
+			cout << "Число " << decimal << " в восьмиричной систиеме равно " << result_8 << endl;
 
 			cout << endl;
 
